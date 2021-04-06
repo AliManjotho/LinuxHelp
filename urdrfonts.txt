@@ -1,0 +1,3 @@
+sudo apt-get install fonts-noto
+
+Chrome -. Settings -> Appearance -> Customize Fonts -> Standard Font = Noto Sans Arabic UI 
