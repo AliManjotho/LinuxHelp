@@ -1,0 +1,23 @@
+sudo apt-get install curl
+curl -O https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+chmod +x Anaconda3-2020.11-Linux-x86_64.sh
+bash Anaconda3-2020.11-Linux-x86_64.sh
+source ~/.bashrc
+
+conda create -n env python
+OR
+conda create -n env3.5 python=3.5 numpy PKG2 PKG3 ...
+conda deactivate
+
+conda activate env3.5
+conda deactivate
+
+conda activate base
+conda list
+
+
+conda env remove -n env3.5
+
+
+conda create -n venv python numpy pandas matplotlib tensorflow-gpu jupyter notebook
+conda activate venv
