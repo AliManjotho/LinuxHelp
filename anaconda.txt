@@ -23,3 +23,15 @@ conda create -n venv python numpy pandas matplotlib tensorflow-gpu jupyter noteb
 conda activate venv
 
 conda remove --all -n env3.5
+
+
+# UNINSTALL anaconda
+
+conda install anaconda-clean
+anaconda-clean --yes
+sudo rm -rf ~/anaconda3
+
+# Removing Anaconda path from .bash_profile
+
+# Edit .bashrc
+# Remove conda initialization block
