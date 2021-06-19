@@ -21,14 +21,17 @@ sudo sed -i 's/google-chrome-stable/google-chrome-stable --force-device-scale-fa
 
 sudo sed -i 's/ur_PK/en_US/g' /etc/default/locale
 
+sudo cp logon.jpg /usr/share/backgrounds/
+sudo cp logon2.jpg /usr/share/backgrounds/
+
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.system.locale region 'en_US.UTF-8'
 gsettings set org.gnome.desktop.interface clock-format '12h'
-gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Abstract_Painting_Photo_by_Pierre_Ch%C3%A2tel-Innocenti.jpg'
-gsettings set org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/Abstract_Painting_Photo_by_Pierre_Ch%C3%A2tel-Innocenti.jpg'
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/logon.jpg'
+gsettings set org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/logon.jpg'
 gsettings set org.gnome.desktop.background picture-options 'stretched'
 gsettings set org.gnome.desktop.screensaver picture-options 'stretched'
 gsettings set org.gnome.desktop.background primary-color '#000000'
@@ -53,7 +56,7 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 sudo sed -i '/Icon=/c\Icon=/usr/share/pixmaps/faces/bicycle.jpg' /var/lib/AccountsService/users/ali
 
-sudo cp logon.jpg /usr/share/backgrounds/
+
 sudo apt -y install libglib2.0-dev-bin
 wget github.com/thiggy01/change-gdm-background/raw/master/change-gdm-background
 sudo chmod +x change-gdm-background
