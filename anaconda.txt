@@ -21,3 +21,5 @@ conda env remove -n env3.5
 
 conda create -n venv python numpy pandas matplotlib tensorflow-gpu jupyter notebook
 conda activate venv
+
+conda remove --all -n env3.5
