@@ -27,8 +27,6 @@ conda remove --all -n env3.5
 
 # UNINSTALL anaconda
 
-conda install anaconda-clean
-anaconda-clean --yes
 sudo rm -rf ~/anaconda3
 
 # Removing Anaconda path from .bash_profile
