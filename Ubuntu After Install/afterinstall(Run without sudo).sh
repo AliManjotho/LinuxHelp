@@ -10,19 +10,19 @@ sudo apt -y install stacer
 sudo apt -y install gnome-tweaks
 # sudo apt -y install gnome-chess
 # sudo apt -y install kmplot
+sudo apt -y install fonts-noto
 
-cd cd ~/Downloads
+cd ~/Downloads
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
-sudo sed -i 's/google-chrome-stable/google-chrome-stable --force-device-scale-factor=1.2/g' /usr/share/applications/google-chrome.desktop
+sudo sed -i 's/google-chrome-stable/google-chrome-stable --force-device-scale-factor=1.0/g' /usr/share/applications/google-chrome.desktop
 
 # sudo snap install glimpse-editor
 
 sudo sed -i 's/ur_PK/en_US/g' /etc/default/locale
 
-sudo cp logon.jpg /usr/share/backgrounds/
-sudo cp logon2.jpg /usr/share/backgrounds/
+sudo cp bliss.jpg /usr/share/backgrounds/
 
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.session idle-delay 0
@@ -30,8 +30,8 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.system.locale region 'en_US.UTF-8'
 gsettings set org.gnome.desktop.interface clock-format '12h'
-gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/logon.jpg'
-gsettings set org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/logon.jpg'
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/bliss.jpg'
+gsettings set org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/bliss.jpg'
 gsettings set org.gnome.desktop.background picture-options 'stretched'
 gsettings set org.gnome.desktop.screensaver picture-options 'stretched'
 gsettings set org.gnome.desktop.background primary-color '#000000'
@@ -60,8 +60,4 @@ sudo sed -i '/Icon=/c\Icon=/usr/share/pixmaps/faces/bicycle.jpg' /var/lib/Accoun
 sudo apt -y install libglib2.0-dev-bin
 wget github.com/thiggy01/change-gdm-background/raw/master/change-gdm-background
 sudo chmod +x change-gdm-background
-sudo ./change-gdm-background /usr/share/backgrounds/logon.jpg
-
-sudo sed -i 's/org.gnome.Totem.desktop/vlc.desktop/g' ~/.config/mimeapps.list
-sudo sed -i 's/rhythmbox.desktop/vlc.desktop/g' ~/.config/mimeapps.list
-sudo sed -i 's/firefox.desktop/google-chrome.desktop/g' ~/.config/mimeapps.list
+sudo ./change-gdm-background /usr/share/backgrounds/bliss.jpg
